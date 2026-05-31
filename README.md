@@ -143,13 +143,13 @@ The dataset was well-structured with no missing values or duplicate records dete
 In this project, both **XGBoost** and **Multi-Layer Perceptron (MLP)** models were developed and evaluated to predict bankruptcy. **XGBoost** demonstrated superior performance and robustness. Below are the key visualizations for our best-performing model (XGBoost):
 
 **1. Feature Importance**
-![Feature Importance](images/feature_importance.png)
+![Feature Importance](images/featureimportance.png)
 
 **2. Confusion Matrix**
-![Confusion Matrix](images/confusion_matrix.png)
+![Confusion Matrix](images/confusionmatrix.png)
 
 **3. ROC Curve (AUC = 0.946)**
-![ROC Curve](images/roc_curve.png)
+![ROC Curve](images/roccurve.png)
 
 ---
 
