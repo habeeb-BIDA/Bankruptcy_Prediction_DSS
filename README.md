@@ -109,13 +109,23 @@ The dataset was well-structured with no missing values or duplicate records dete
 * **Description:** Provides an executive overview of bankruptcy risk, financial performance, and company segmentation, combining clustering results and risk classification.
 * **Insight Derived:** Most companies are classified as Low Risk, and these companies generally demonstrate stronger financial performance and stability.
 
+![Executive Dashboard](images/dashboard1.png)
+
+---
+
 **Dashboard 2: Financial Relationship & Risk Analysis**
 * **Description:** Details the relationships between key indicators (e.g., ROA vs Liability to Equity, Debt Ratio vs Cash Flow Rate) and bankruptcy risk across different clusters.
 * **Insight Derived:** Companies with stronger profitability and retained earnings exhibit lower financial risk, while higher debt dependence is associated with increased risk.
 
+![Risk Analysis Dashboard](images/dashboard2.png)
+
+---
+
 **Dashboard 3: Decision Support & Risk Monitoring**
 * **Description:** Combines predictive analytics and company classification (Safe, Monitoring, Critical) to support decision-making and risk monitoring.
-* **Insight Derived:** Companies in the Critical category generally exhibit higher bankruptcy risk and weaker financial conditions, making this an effective tool for prioritizing risk .
+* **Insight Derived:** Companies in the Critical category generally exhibit higher bankruptcy risk and weaker financial conditions, making this an effective tool for prioritizing risk.
+
+![Decision Support Dashboard](images/dashboard3.png)
 
 ---
 
@@ -127,6 +137,22 @@ The dataset was well-structured with no missing values or duplicate records dete
   * **MLP Neural Network:** Achieved an Accuracy of 96%, ROC-AUC Score of 0.843, Precision of 0.41, and Recall of 0.41.
   * **K-Means Clustering:** Applied with k=2, identifying two primary segments: Cluster 0 (stronger profitability, lower debt) and Cluster 1 (higher leverage, greater risk).
 * **Feature Importance:** The XGBoost model identified "Borrowing dependency" as the most influential financial indicator (importance score ~0.279), followed by "Persistent EPS in the Last Four Seasons.
+
+### Model Evaluation & Results (XGBoost)
+
+**1. Feature Importance**
+![Feature Importance](images/Feature_Importance.png)
+
+**2. Confusion Matrix**
+![Confusion Matrix](images/Confusion_Matrix.png)
+
+**3. ROC Curve (AUC = 0.946)**
+![ROC Curve](images/ROC_Curve.png)
+
+### Company Segmentation (K-Means)
+
+**4. K-Means Cluster Visualization**
+![K-Means Clusters](images/Clusters.png)
 
 ---
 
