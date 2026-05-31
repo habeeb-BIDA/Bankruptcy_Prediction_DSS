@@ -159,6 +159,8 @@ To further support decision-making, K-Means clustering was applied to segment co
 
 **4. K-Means Cluster Visualization**
 ![K-Means Clusters](images/clusters.png)
+
+
 ---
 
 ## Tools Research and Selection Effort
