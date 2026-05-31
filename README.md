@@ -138,22 +138,27 @@ The dataset was well-structured with no missing values or duplicate records dete
   * **K-Means Clustering:** Applied with k=2, identifying two primary segments: Cluster 0 (stronger profitability, lower debt) and Cluster 1 (higher leverage, greater risk).
 * **Feature Importance:** The XGBoost model identified "Borrowing dependency" as the most influential financial indicator (importance score ~0.279), followed by "Persistent EPS in the Last Four Seasons.
 
-### Model Evaluation & Results (XGBoost)
+### Model Evaluation & Results
+
+In this project, both **XGBoost** and **Multi-Layer Perceptron (MLP)** models were developed and evaluated to predict bankruptcy. **XGBoost** demonstrated superior performance and robustness. Below are the key visualizations for our best-performing model (XGBoost):
 
 **1. Feature Importance**
-![Feature Importance](images/Feature_Importance.png)
+![Feature Importance](images/feature_importance.png)
 
 **2. Confusion Matrix**
-![Confusion Matrix](images/Confusion_Matrix.png)
+![Confusion Matrix](images/confusion_matrix.png)
 
 **3. ROC Curve (AUC = 0.946)**
-![ROC Curve](images/ROC_Curve.png)
+![ROC Curve](images/roc_curve.png)
 
-### Company Segmentation (K-Means)
+---
+
+### Company Segmentation (K-Means Clustering)
+
+To further support decision-making, K-Means clustering was applied to segment companies based on their financial behavior and risk levels. 
 
 **4. K-Means Cluster Visualization**
-![K-Means Clusters](images/Clusters.png)
-
+![K-Means Clusters](images/clusters.png)
 ---
 
 ## Tools Research and Selection Effort
