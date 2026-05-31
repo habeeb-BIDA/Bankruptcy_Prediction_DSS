@@ -158,7 +158,7 @@ In this project, both **XGBoost** and **Multi-Layer Perceptron (MLP)** models we
 To further support decision-making, K-Means clustering was applied to segment companies based on their financial behavior and risk levels. 
 
 **4. K-Means Cluster Visualization**
-![K-Means Clusters](images/clusters.png)
+![K-Means Clusters](images/Clusters.png)
 
 
 ---
