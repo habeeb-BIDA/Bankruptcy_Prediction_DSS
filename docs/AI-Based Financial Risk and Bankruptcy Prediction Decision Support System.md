@@ -306,15 +306,6 @@ This section applies statistical testing methods to determine whether the differ
 
 The T-test results indicate statistically significant differences in ROA(A), Debt Ratio %, and Cash Flow Rate between bankrupt and non-bankrupt companies (p < 0.05). In contrast, Current Ratio does not show a statistically significant difference (p > 0.05). These findings suggest that profitability, leverage, and cash flow measures are more strongly associated with bankruptcy risk than Current Ratio in this dataset.
 
-### Dataset Challenges Identified During Analysis
-Several challenges were identified during the exploratory analysis process:
-* The dataset is highly imbalanced because bankrupt companies represent a small percentage of the data.
-* Several financial indicators contain outliers and extreme values.
-* Some financial relationships appear to be nonlinear and complex.
-* The dataset contains many financial variables, which increases model complexity.
-
-These challenges will be addressed during preprocessing and model development stages.
-
 # Data Visualization and Insights
 
 ## Dashboard Design & Business Insights
