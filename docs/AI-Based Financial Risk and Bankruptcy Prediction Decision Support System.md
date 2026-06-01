@@ -84,8 +84,6 @@ The main objectives of this project are:
 # Data Research and Acquiring Effort
 The dataset used in this project was obtained from the UCI Machine Learning Repository and is based on financial data collected from the Taiwan Economic Journal (TEJ) database.
 
-***Dataset Source:** https://archive.ics.uci.edu/dataset/572/taiwanese+bankruptcy+prediction
-
 The dataset contains 6,819 company records and 96 financial indicators related to profitability, liquidity, leverage, operational efficiency, and financial stability. It also includes a bankruptcy label, making it suitable for predictive modeling, statistical analysis, clustering, and Business Intelligence applications.
 
 Several financial datasets were reviewed before selecting the final dataset. This dataset was chosen because it provides real company financial records, a clearly defined target variable, and a rich set of financial indicators that support bankruptcy prediction and financial risk analysis. Although the data originates from Taiwanese companies, the financial indicators used are widely recognized in financial analysis and can be applied to organizations in different countries where similar financial data is available. However, prediction results and financial behavior patterns may vary across economic environments and regulatory frameworks.
@@ -900,6 +898,8 @@ The analysis showed that financially distressed companies are generally associat
 The developed dashboards improved result interpretation through interactive visualization, KPI monitoring, company classification, and financial risk exploration. Overall, the project demonstrates how AI and Business Intelligence techniques can support data-driven financial decision-making and early bankruptcy risk detection.
 
 # References
+
+**Dataset Source:** https://archive.ics.uci.edu/dataset/572/taiwanese+bankruptcy+prediction
 
 Altman, E. I. (1968). Financial ratios, discriminant analysis and the prediction of corporate bankruptcy. *Journal of Finance, 23*(4), 589–609.
 
