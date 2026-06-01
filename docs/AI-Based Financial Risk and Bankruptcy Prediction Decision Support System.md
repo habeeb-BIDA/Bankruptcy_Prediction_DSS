@@ -536,11 +536,11 @@ This section presents the machine learning and deep learning models developed to
 
 ### Confusion Matrix
 
-![XGBoost Confusion Matrix](../images/confusionmatrix.png)
+![XGBoost Confusion Matrix](../images/xgboostconfusionmatrix.png)
 
 ### ROC Curve & AUC Score
 
-![XGBoost ROC Curve Code and Chart](../images/roccurve.png)
+![XGBoost ROC Curve Code and Chart](../images/xgboostroccurve.png)
 
 
 ### Financial Feature Importance Analysis
