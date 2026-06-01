@@ -1,9 +1,10 @@
 # AI-Based Financial Risk and Bankruptcy Prediction Decision Support System
 
 ## Authors
-Habeeb Abdullah
+Habeeb ibraheem Abdallah, Walid Fadi Samara & Saif Ahmad Sandoqa 
 
-ID: 202210158
+202210158, 202311098, 202120382
+
 
 **Supervised by:**
 
