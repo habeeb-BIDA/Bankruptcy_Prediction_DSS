@@ -51,13 +51,13 @@ The results demonstrated strong predictive performance, with XGBoost achieving t
 Overall, the integration of predictive analytics, clustering, and Business Intelligence provided a comprehensive framework for financial risk assessment, bankruptcy prediction, and decision support. The developed system enables financial monitoring, early risk detection, and data-driven strategic decision-making.
 
 # Acknowledgment
-I would like to express my sincere appreciation to my supervisor and instructors for their guidance, valuable insights, and continuous support throughout the completion of this project. Their knowledge, feedback, and encouragement contributed significantly to the successful development of this work and enriched my understanding of Business Intelligence, Data Analytics, and Artificial Intelligence applications.
+We would like to express our sincere appreciation to our supervisor and instructors for their guidance, valuable insights, and continuous support throughout the completion of this project. Their knowledge, feedback, and encouragement contributed significantly to the successful development of this work and enriched our understanding of Business Intelligence, Data Analytics, and Artificial Intelligence applications.
 
-I am also deeply grateful to my family for their unwavering support, patience, and motivation during my academic journey. Their encouragement provided me with the determination and confidence needed to overcome challenges and achieve my goals.
+We are also deeply grateful to our families for their unwavering support, patience, and motivation during our academic journey. Their encouragement provided us with the determination and confidence needed to overcome challenges and achieve our goals.
 
-I would like to thank my friends and colleagues for their support, cooperation, and positive encouragement throughout the project. Their assistance and shared experiences made this journey both productive and enjoyable.
+We would like to thank our friends and colleagues for their support, cooperation, and positive encouragement throughout the project. Their assistance and shared experiences made this journey both productive and enjoyable.
 
-In addition, I would like to acknowledge the faculty and staff members whose dedication to education and academic excellence provided a stimulating learning environment that fostered growth, innovation, and critical thinking. Finally, I extend my gratitude to everyone who contributed, directly or indirectly, to the completion of this project. Your support and encouragement have played an important role in both my academic achievements and personal development.
+In addition, we would like to acknowledge the faculty and staff members whose dedication to education and academic excellence provided a stimulating learning environment that fostered growth, innovation, and critical thinking. Finally, we extend our gratitude to everyone who contributed, directly or indirectly, to the completion of this project. Your support and encouragement have played an important role in both our academic achievements and personal development.
 
 # Business Intelligence Project Description and Objectives
 
