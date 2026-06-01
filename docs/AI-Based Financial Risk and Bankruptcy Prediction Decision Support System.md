@@ -490,3 +490,99 @@ K-Means clustering was applied to group companies with similar financial charact
 
 The combination of supervised and unsupervised techniques provides a comprehensive analysis of bankruptcy risk. Classification models focus on predicting bankruptcy, while clustering helps identify hidden financial risk patterns and company segments.
 
+### Prediction Analysis
+
+This section presents the machine learning and deep learning models developed to predict bankruptcy risk. The models were trained using the preprocessed financial dataset and evaluated using multiple classification metrics.
+
+## XGBoost Classifier
+
+### Model Training & Prediction
+
+![XGBoost Training and Prediction Code](../images/xgboosttrainingcode.png)
+
+
+### Model Evaluation
+
+![XGBoost Classification Report Code and Output](../images/xgboostclassificationreport.png)
+
+### Confusion Matrix
+
+![XGBoost Confusion Matrix](../images/confusionmatrix.png)
+
+### ROC Curve & AUC Score
+
+![XGBoost ROC Curve Code and Chart](../images/roccurve.png)
+
+
+### Financial Feature Importance Analysis
+
+
+![XGBoost Feature Importance Code and Chart](../images/featureimportance.png)
+
+**Top 10 most influential features:**
+* Borrowing dependency → 0.2792 (most important)
+* Persistent EPS in the Last Four Seasons → 0.1129
+* Non-industry income and expenditure/revenue → 0.0407
+* Interest Coverage Ratio (Interest expense to EBIT) → 0.0367
+* Total debt/Total net worth → 0.0336
+* ROA(C) before interest and depreciation before interest → 0.0255
+* ROA(A) before interest and % after tax → 0.0239
+* Revenue Per Share (Yuan ¥) → 0.0218
+* Accounts Receivable Turnover → 0.0192
+* Contingent liabilities/Net worth → 0.0191
+
+### XGBoost Model Analysis
+
+The XGBoost model was trained using the balanced financial dataset to predict bankruptcy risk based on multiple financial indicators.
+
+### Model Performance
+
+The model achieved strong classification performance:
+
+Accuracy: 97%
+
+ROC-AUC Score: 0.946
+
+Precision: 0.50
+
+Recall: 0.57
+
+F1-Score: 0.53
+
+These results indicate that the model was highly effective in distinguishing between bankrupt and non-bankrupt companies despite class imbalance challenges.
+
+### Confusion Matrix Analysis
+
+The confusion matrix results showed:
+
+True Negatives: 1295
+
+False Positives: 25
+
+False Negatives: 19
+
+True Positives: 25
+
+The model demonstrated strong capability in identifying financially stable companies while maintaining moderate bankruptcy detection performance.
+
+### Feature Importance Analysis
+
+The most influential financial indicator was Borrowing Dependency with an importance score of approximately 0.279.
+
+Other important indicators included:
+
+Persistent EPS in the Last Four Seasons
+
+Interest Coverage Ratio
+
+Total Debt to Total Net Worth
+
+ROA(A)
+
+ROA(C)
+
+These findings suggest that debt dependency, profitability, and earnings stability are major factors associated with bankruptcy risk.
+
+### Overall Interpretation
+
+The XGBoost model achieved strong classification performance with 97% accuracy and an ROC-AUC score of 0.946. The results indicate that debt dependency, profitability, and earnings stability are among the most influential factors associated with bankruptcy risk.
