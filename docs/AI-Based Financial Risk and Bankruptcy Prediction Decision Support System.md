@@ -82,7 +82,7 @@ The main objectives of this project are:
 * Develop a financial decision support system that combines predictive analytics and Business Intelligence visualization.
 
 # Data Research and Acquiring Effort
-The dataset used in this project was obtained from the UCI Machine Learning Repository and is based on financial data collected from the Taiwan Economic Journal (TEJ) database.
+The dataset used in this project was obtained from the UCI Machine Learning Repository and is based on financial data collected from the Taiwan Economic Journal (TEJ) database for the years 1999 to 2009. Company bankruptcy was defined based on the business regulations of the Taiwan Stock Exchange.
 
 The dataset contains 6,819 company records and 96 financial indicators related to profitability, liquidity, leverage, operational efficiency, and financial stability. It also includes a bankruptcy label, making it suitable for predictive modeling, statistical analysis, clustering, and Business Intelligence applications.
 
