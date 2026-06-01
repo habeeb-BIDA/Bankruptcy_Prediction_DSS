@@ -77,7 +77,7 @@ https://archive.ics.uci.edu/dataset/572/taiwanese+bankruptcy+prediction
 * **Retained Earnings to Total Assets:** Measures accumulated profitability strength.
 * **Borrowing dependency:** Indicates dependency on borrowed funds.
 
-**Exploratory Data Analysis (EDA):**
+### Exploratory Data Analysis (EDA):
 * **Distribution:** The dataset is highly imbalanced, with 6,599 non-bankrupt companies and 220 bankrupt companies.
 * **Patterns discovered:** Bankrupt companies generally have higher Liability to Equity values and lower profitability-related indicators compared to non-bankrupt companies
 .
@@ -146,10 +146,10 @@ In this project, both **XGBoost** and **Multi-Layer Perceptron (MLP)** models we
 ![Feature Importance](images/featureimportance.png)
 
 **2. Confusion Matrix**
-![Confusion Matrix](images/confusionmatrix.png)
+![Confusion Matrix](images/xgboostconfusionmatrix.png)
 
 **3. ROC Curve (AUC = 0.946)**
-![ROC Curve](images/roccurve.png)
+![ROC Curve](images/xgboostroccurve.png)
 
 ---
 

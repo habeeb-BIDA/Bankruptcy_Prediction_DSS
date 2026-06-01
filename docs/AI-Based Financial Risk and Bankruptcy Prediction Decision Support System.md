@@ -1,4 +1,4 @@
-# Part 1: Project Overview and Exploratory Data Analysis (EDA)
+AI-Based Financial Risk and Bankruptcy Prediction Decision Support System
 
 ## Authors
 Habeeb Abdullah
