@@ -12,6 +12,36 @@ Dr Ayman Mansour
 **Course:** 307498 – Graduation Project  
 **Semester:** Second Semester, 2026/2027 
 
+
+# Contents
+
+1. [Abstract](#abstract)
+2. [Acknowledgment](#acknowledgment)
+3. [Business Intelligence Project Description and Objectives](#business-intelligence-project-description-and-objectives)
+    * [Project Description and Goal](#project-description-and-goal)
+    * [Project Objectives](#project-objectives)
+4. [Data Research and Acquiring Effort](#data-research-and-acquiring-effort)
+5. [Data Description and Understanding](#data-description-and-understanding)
+    * [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+6. [Data Primary Cleaning and Transformation](#data-primary-cleaning-and-transformation)
+7. [Data Visualization and Insights](#data-visualization-and-insights)
+8. [Dashboard Design & Business Insights](#dashboard-design-and-business-insights)
+9. [Data Preprocessing](#data-preprocessing)
+10. [Advanced Analytics and AI Modeling](#advanced-analytics-and-ai-modeling)
+    * [Prediction Analysis](#prediction-analysis)
+    * [XGBoost Classifier](#xgboost-classifier)
+    * [MLP Neural Network](#mlp-neural-network)
+    * [Model Comparison](#model-comparison)
+    * [K-Means Clustering](#k-means-clustering)
+    * [Clustering Results Interpretation](#clustering-results-interpretation)
+11. [Export Final Dataset for Power BI](#export-final-dataset-for-power-bi)
+12. [Tools Research and Selection Effort](#tools-research-and-selection-effort)
+13. [Project Deployment Effort - Use Case](#project-deployment-effort-use-case)
+14. [Results](#results)
+15. [Conclusion](#conclusion)
+16. [References](#references)
+
+
 # Abstract
 This project presents an AI-based Financial Risk and Bankruptcy Prediction Decision Support System that integrates Business Intelligence, machine learning, clustering analysis, and interactive data visualization techniques. The study utilizes financial data from Taiwanese companies to analyze financial behavior, assess bankruptcy risk, and support informed financial decision-making.
 
@@ -32,14 +62,14 @@ In addition, I would like to acknowledge the faculty and staff members whose ded
 
 # Business Intelligence Project Description and Objectives
 
-## Project Description and Goal
+### Project Description and Goal
 This project aims to develop an intelligent financial risk analysis and bankruptcy prediction system using Business Intelligence and machine learning techniques. The analysis is based on real financial data from Taiwanese companies and focuses on identifying bankruptcy risk patterns, evaluating financial performance, and supporting financial decision-making. The study utilizes key financial indicators related to profitability, leverage, liquidity, growth, and financial stability.
 
 Several analytical approaches were applied, including exploratory data analysis, statistical testing, machine learning, clustering analysis, and interactive dashboard visualization. Python and Google Colab were used for data preprocessing, statistical analysis, and predictive modeling, while Microsoft Power BI was used to develop interactive dashboards and business intelligence visualizations.
 
 The project evaluates the ability of machine learning models to predict bankruptcy risk, compares financial behavior among companies, and applies clustering techniques to identify groups with similar financial characteristics. The final outcome is a Decision Support System (DSS) that integrates predictive analytics and interactive visualization to support financial monitoring, bankruptcy risk assessment, and data-driven decision-making (Power, 2002).
 
-## Project Objectives
+### Project Objectives
 The main objectives of this project are:
 * Analyze financial indicators associated with bankruptcy risk and company financial stability.
 * Perform exploratory data analysis to understand financial patterns and relationships between variables.
@@ -65,12 +95,12 @@ The dataset is publicly available through the UCI Machine Learning Repository (D
 
 # Data Description and Understanding
 
-## Dataset Preview & Shape
+### Dataset Preview & Shape
 The dataset contains 6819 rows and 96 columns. The dataset appears to contain complete records with no significant missing values.
 
 **Observation:** The dataset contains 6819 rows and 96 columns, providing sufficient financial indicators for bankruptcy prediction analysis. The dataset contains many financial indicators related to company profitability, liquidity, debt structure, operational efficiency, and financial stability.
 
-## Important Financial Indicators Description
+### Important Financial Indicators Description
 The table below summarizes key financial indicators used in this project. Financial ratios are widely used to evaluate company performance and bankruptcy risk (Altman, 1968).
 
 | Financial Indicator | Description |
@@ -125,7 +155,7 @@ The dataset was well-structured, with no significant missing values, duplicate r
 
 Minimal preprocessing steps were applied to support exploratory analysis and predictive modeling.
 
-## Missing Values Check
+### Missing Values Check
 Checks for missing values in the dataset.
 
 ![Missing Values Check](../images/missingvaluescheck.png)
@@ -134,7 +164,7 @@ Checks for missing values in the dataset.
 
 No missing values were detected in the dataset, indicating clean and complete financial records.
 
-## Duplicate Values Check
+### Duplicate Values Check
 
 Checks for duplicate records in the dataset.
 
@@ -143,14 +173,14 @@ Checks for duplicate records in the dataset.
 ### Observation
 No duplicate records were found in the dataset, indicating clean and consistent financial data.
 
-## Selected Financial Indicators
+### Selected Financial Indicators
 The following financial indicators were selected because they represent important aspects of financial performance, liquidity, profitability, cash flow, and debt structure.
 These indicators were used to analyze financial behavior and bankruptcy risk patterns.
 
 ![ Selected Financial Indicators](../images/selectedindicators.png)
 
 
-## Statistical Summary Analysis
+### Statistical Summary Analysis
 
 Provides statistical summaries of the selected financial indicators.
 
@@ -161,13 +191,13 @@ Provides statistical summaries of the selected financial indicators.
 
 The statistical results show noticeable variation across several financial indicators. Some variables, especially liquidity-related indicators, contain large value ranges and potential outliers. Profitability and debt-related indicators also vary across companies, reflecting differences in financial performance and bankruptcy risk. These findings support the need for preprocessing techniques such as scaling before model training.
 
-## Bankruptcy Distribution Analysis
+### Bankruptcy Distribution Analysis
 
 ![Bankruptcy Distribution](../images/bankruptcydistribution.png)
 
 **Observation:** The dataset is highly imbalanced, with 6,599 non-bankrupt companies and 220 bankrupt companies. The visualization confirms a significant class imbalance, as non-bankrupt companies greatly outnumber bankrupt companies. This pattern reflects real-world financial datasets and highlights the need for class balancing techniques during model development.
 
-## Feature Distribution Analysis
+### Feature Distribution Analysis
 
 Explores the distribution of selected financial indicators to better understand data behavior and variability.
 
@@ -182,7 +212,7 @@ Explores the distribution of selected financial indicators to better understand 
 
 The distributions show different patterns across the selected financial indicators. Liquidity-related variables such as Current Ratio and Quick Ratio appear highly skewed and contain extreme values, while profitability measures are more concentrated around their central values. These findings indicate the presence of outliers and support the need for preprocessing before model development.
 
-## Outlier Analysis
+### Outlier Analysis
 
 Examines whether the selected financial indicators contain extreme values that may affect statistical analysis and model performance.
 
@@ -199,7 +229,7 @@ The boxplots reveal the presence of outliers across multiple financial indicator
 
 These outliers were not removed directly because they may represent financially distressed companies or unusual financial conditions that are important for bankruptcy prediction analysis (Han, Kamber, & Pei, 2012).
 
-## Correlation Analysis and Feature Relationships
+### Correlation Analysis and Feature Relationships
 
 Correlation Heatmap
 This step analyzes the linear relationships between selected financial indicators and bankruptcy risk.
@@ -207,7 +237,7 @@ This step analyzes the linear relationships between selected financial indicator
 ![Correlation Heatmap](../images/correlationheatmap.png)
 
 
-## Correlation Ranking:
+### Correlation Ranking:
 
 The following step ranks financial indicators based on their correlation strength with bankruptcy risk.
 
@@ -229,7 +259,7 @@ The correlation analysis shows that most financial indicators have weak to moder
 Business Insight
 The findings indicate that leverage-related indicators are important predictors of bankruptcy risk. Therefore, debt structure and profitability measures should be considered key variables during predictive model development.
 
-## Financial Comparison by Bankruptcy Status
+### Financial Comparison by Bankruptcy Status
 
 A comparative analysis was conducted to examine differences in selected financial indicators between bankrupt and non-bankrupt companies. Boxplots were used to identify patterns and variations associated with bankruptcy risk.
 
@@ -245,7 +275,7 @@ The boxplot shows that bankrupt companies generally have higher debt ratio value
 
 The results indicate that non-bankrupt companies generally have higher ROA(A) values than bankrupt companies. This suggests that stronger profitability and more efficient asset utilization are associated with lower bankruptcy risk, while lower profitability may signal financial distress.
 
-## Financial Indicator Summary by Bankruptcy Status:
+### Financial Indicator Summary by Bankruptcy Status:
 
 This step summarizes selected financial indicators for bankrupt and non-bankrupt companies to support financial insight generation.
 
@@ -261,7 +291,7 @@ The summary table shows that bankrupt companies generally have higher Liability 
 
 **Observation:** The results show that bankruptcy cases become more frequent as debt levels increase. The High Debt category has the highest bankruptcy percentage (8.27%), compared with 1.10% in the Medium Debt category and 0.31% in the Low Debt category. This suggests that higher financial leverage is associated with greater bankruptcy risk.
 
-## Statistical Testing
+### Statistical Testing
 This section applies statistical testing methods to determine whether the differences between bankrupt and non-bankrupt companies are statistically significant. The independent samples T-test was used to compare the mean values of both groups.
 
 **Hypotheses:**
@@ -403,33 +433,33 @@ This dashboard supports decision-making and financial risk monitoring by combini
 # Data Preprocessing
 This section prepares the dataset for machine learning and deep learning models by removing highly correlated features, scaling the data, handling class imbalance, and splitting the dataset into training and testing sets.
 
-## 1. Remove Temporary Categorical Analysis Column
+### 1. Remove Temporary Categorical Analysis Column
 A temporary column (Debt_Category) created during exploratory analysis was removed before model development.
 
 **Observation:** 
 
 The final dataset contains only variables intended for model training, helping maintain a clean and consistent feature set.
 
-## 2. Correlation-Based Feature Reduction
+### 2. Correlation-Based Feature Reduction
 Highly correlated features were identified and removed using a correlation threshold of 0.95. This threshold was selected to eliminate only extremely redundant variables while preserving most of the financial information contained in the dataset.
 
 **Observation:** 
 
 The number of features was reduced from 95 to 79, resulting in a more compact dataset while retaining the key financial indicators required for bankruptcy prediction.
 
-## 3. Train-Test Split
+### 3. Train-Test Split
 The dataset was divided into training and testing subsets using stratified sampling.
 
 **Observation:** 
 
 An 80/20 split was applied, with 80% of the data used for training and 20% for testing. This provided sufficient data for model training while maintaining reliable model evaluation.
 
-## 4. Feature Scaling
+### 4. Feature Scaling
 StandardScaler was applied because the financial indicators have different scales and ranges. Standardization helps improve the performance of machine learning algorithms that are sensitive to feature magnitude.
 
 **Observation:** The transformed features were centered around zero and scaled to a similar range, reducing the influence of differences in feature magnitudes during model training.
 
-## 5. Handling Imbalanced Data
+### 5. Handling Imbalanced Data
 SMOTE (Synthetic Minority Over-sampling Technique) was applied to address the severe class imbalance in the bankruptcy dataset and improve the model's ability to learn patterns from bankrupt companies.
 
 ### Class Distribution Comparison Before & After Imbalance Handling
@@ -440,7 +470,7 @@ SMOTE (Synthetic Minority Over-sampling Technique) was applied to address the se
 
 Before SMOTE, the training dataset was highly imbalanced, containing 5,279 non-bankrupt companies and 176 bankrupt companies. After applying SMOTE, both classes contained 5,279 observations, resulting in a perfectly balanced training dataset. SMOTE was applied only to the training data to prevent information leakage and ensure fair model evaluation. Although the training data was balanced, the original dataset remains dominated by non-bankrupt companies, reflecting real-world bankruptcy distributions.
 
-## 6. Final Dataset Shapes
+### 6. Final Dataset Shapes
 * **X_train_balanced:** (10558, 79)
 * **y_train_balanced:** (10558,)
 * **X_test:** (1364, 79)
@@ -452,11 +482,11 @@ The preprocessing pipeline produced a balanced training dataset with 10,558 obse
 
 # Advanced Analytics and AI Modeling
 
-## Modeling Methodology
+### Modeling Methodology
 
 Different machine learning and deep learning techniques were applied to analyze bankruptcy risk from multiple perspectives. The selected models were chosen based on the dataset characteristics, including nonlinear financial relationships, class imbalance, and the large number of financial indicators.
 
-##Supervised Models
+### Supervised Models
 
 ### 1. XGBoost Classifier
 
@@ -466,7 +496,7 @@ XGBoost was selected because it performs efficiently on structured financial dat
 
 The MLP Neural Network was used to evaluate deep learning performance on financial data. The model can learn complex interactions among financial variables and identify hidden nonlinear patterns that may not be captured by traditional machine learning methods (Haykin, 2009).
 
-## Unsupervised Model
+### Unsupervised Model
 
 ### 3. K-Means Clustering
 
@@ -586,3 +616,300 @@ These findings suggest that debt dependency, profitability, and earnings stabili
 ### Overall Interpretation
 
 The XGBoost model achieved strong classification performance with 97% accuracy and an ROC-AUC score of 0.946. The results indicate that debt dependency, profitability, and earnings stability are among the most influential factors associated with bankruptcy risk.
+
+## MLP Neural Network Model
+
+![MLP Training and Prediction Code](../images/mlptrainingcode.png)
+
+### Model Evaluation
+
+![MLP Classification Report](../images/mlpcassificationreport.png)
+
+### Confusion Matrix
+
+![MLP Confusion Matrix](../images/mlpconfusionmatrix.png)
+
+### ROC Curve & AUC Score
+
+![MLP ROC Curve](../images/mlproccurve.png)
+
+## MLP Neural Network Model Analysis
+
+The MLP Neural Network model was trained using the balanced financial dataset to predict bankruptcy risk. The model used two hidden layers with 100 and 50 neurons, ReLU activation, Adam optimizer, and a maximum of 500 iterations.
+
+Model Performance
+
+The MLP model achieved good overall classification performance:
+
+Accuracy: 96%
+
+ROC-AUC Score: approximately 0.843
+
+Precision for bankrupt class: 0.41
+
+Recall for bankrupt class: 0.41
+
+F1-Score for bankrupt class: 0.41
+
+These results indicate that the model performed strongly in identifying non-bankrupt companies while showing moderate performance in detecting bankrupt companies.
+
+### Confusion Matrix Analysis
+
+The confusion matrix results showed:
+
+True Negatives: 1294
+
+False Positives: 26
+
+False Negatives: 26
+
+True Positives: 18
+
+This means the model correctly classified most non-bankrupt companies, while some bankrupt companies were still difficult to identify accurately.
+
+### ROC Curve Analysis
+
+The ROC curve demonstrated good classification capability with an AUC score of approximately 0.843. This indicates that the MLP model was able to distinguish reasonably well between bankrupt and non-bankrupt companies.
+
+### Overall Interpretation
+
+Overall, the MLP Neural Network demonstrated effective learning of complex financial relationships and produced strong prediction performance on the bankruptcy dataset. The model successfully captured nonlinear financial patterns and provided reliable classification results for bankruptcy prediction tasks.
+
+# Model Comparison and Evaluation
+
+This section compares the performance of the machine learning and deep learning models used for bankruptcy prediction.
+
+The evaluation focuses on classification accuracy, precision, recall, F1-score, and ROC-AUC performance to determine the most effective model for financial risk prediction.
+
+![Model Comparison Table](../images/modelcomparisontable.png)
+
+## Model Performance Visualization
+
+![Model Comparison Table](../images/modelcomparisonvisualization.png)
+
+### Final Model Selection
+
+Based on the evaluation results, the XGBoost model was selected as the final bankruptcy prediction model.
+
+The model achieved the strongest overall performance, particularly in Recall and ROC-AUC metrics, making it more suitable for financial risk prediction and bankruptcy detection.
+
+# K-Means Clustering Model
+
+### Feature Selection and Scaling for Clustering
+
+![Feature Selection and Scaling for Clustering](../images/clusteringfeaturesselectionandscaling.png)
+
+### Elbow Method
+
+![Elbow Method](../images/elbowmethod.png)
+
+### K-Means Model Training
+
+![K-Means Model Training](../images/kmeanmmodeltraining.png)
+
+### Cluster Visualization
+
+![K-Means Model Training](../images/Clusters.png)
+
+
+### K-Means Clustering Analysis
+
+The K-Means clustering model was applied to identify hidden financial behavior patterns among companies using key financial indicators related to profitability, leverage, and financial stability.
+
+### Feature Selection and Scaling
+
+The clustering analysis used the following financial variables:
+
+• ROA(A) before interest and % after tax
+• Debt ratio %
+
+• Cash Flow Rate
+
+• Retained Earnings to Total Assets
+
+• Liability to Equity
+
+All variables were standardized using StandardScaler before clustering.
+
+###Elbow Method Analysis
+
+The Elbow Method was used to determine the optimal number of clusters.
+
+Although the curve suggested that 3–4 clusters could be considered, additional testing showed that some clusters contained very few companiesو sometimes only one company, indicating potential outliers rather than meaningful financial groups.
+
+Therefore, k = 2 was selected to achieve more balanced and interpretable company segmentation.
+
+### Cluster Distribution
+
+The final clustering model produced two groups:
+
+• Cluster 0: 3694 companies
+
+• Cluster 1: 3125 companies
+
+### Cluster Interpretation
+
+The visualization shows partial separation between the two clusters, indicating that companies share some common financial characteristics while still exhibiting distinct financial behavior patterns.
+
+• Cluster 0 generally represents companies with stronger profitability and lower debt levels.
+• Cluster 1 generally represents companies with higher leverage and greater financial risk.
+
+### Overall Interpretation
+
+The K-Means model successfully identified two meaningful financial company segments based on profitability, leverage, and financial stability indicators. While the clusters are not completely separated, they reveal useful financial behavior patterns that support risk analysis, company segmentation, and decision-making processes.
+
+# Tools Research and Selection Effort
+
+### Python
+
+Python was used for data preprocessing, exploratory data analysis, statistical testing, machine learning, and deep learning model development. Key libraries included Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, TensorFlow/Keras, and Imbalanced-learn (SMOTE).
+
+Python was selected because of its extensive support for data analytics, machine learning, and financial risk prediction.
+
+### Power BI
+
+Power BI was used to develop interactive dashboards and business intelligence visualizations. The dashboards included financial risk indicators, bankruptcy analysis, risk segmentation, and decision-support insights.
+
+Power BI was selected because of its strong visualization capabilities and support for interactive business reporting.
+
+### Microsoft Excel
+
+Microsoft Excel was used for initial dataset inspection, data verification, and basic organization before advanced preprocessing and analysis.
+
+### Google Colab
+
+Google Colab served as the primary development environment for implementing machine learning and deep learning models. It provided cloud-based computational resources and simplified notebook execution and model training.
+
+### Integration
+
+The selected tools created an integrated analytics workflow covering data preprocessing, exploratory analysis, statistical testing, predictive modeling, and interactive visualization. This integration supported the development of a financial Decision Support System (DSS) for bankruptcy risk analysis and prediction.
+
+# Project Deployment Effort – Use Case
+
+### 1. Dashboard Monitoring and Decision Support
+The Power BI dashboards allow management to monitor:
+
+* Financial stability and creditworthiness scores
+
+* Bankruptcy risk probabilities and early warning signs
+
+* Operational efficiency and profitability indicators
+
+* Company risk categorization (Safe, Monitoring, Critical)
+
+* Financial behavior patterns across different company clusters
+
+Managers can quickly identify financially vulnerable companies, monitor high-risk segments, and prioritize risk mitigation efforts.
+
+### 2. Prediction Models – Bankruptcy Forecasting
+The prediction models help forecast bankruptcy risk based on historical financial data before financial distress occurs.
+
+**Business Uses:**
+* Identify companies with a high probability of financial failure
+* Improve risk assessment and early warning systems
+
+* Reduce financial losses and failed investments
+
+* Enhance data-driven strategic decision-making
+
+XGBoost provides stronger prediction accuracy and better handling of imbalanced data, while the MLP Neural Network successfully captures complex nonlinear financial relationships.
+
+### 3. Company Segmentation – Clustering
+K-Means clustering helps classify companies into groups based on their financial performance, profitability, and leverage.
+
+**Business Applications:**
+* Prioritize monitoring for high-risk company segments
+
+* Design targeted financial strategies for different risk profiles
+* Improve resource allocation and financial planning
+
+* Optimize investor decision-making and portfolio management
+
+### Overall Business Value
+By combining dashboards, prediction models, and clustering:
+
+* **Dashboards answer:** "What is the current financial performance and risk status?
+* **Prediction models answer:** "Which companies are likely to face bankruptcy next?
+* **Clustering answers:** "Which financial company groups require immediate attention?
+
+Together, these analytical approaches improve financial risk monitoring, reduce bankruptcy exposure, optimize resource allocation, and support smarter business decisions.
+
+
+# Results
+
+The results demonstrate that combining machine learning, clustering analysis, and Business Intelligence techniques provides valuable insights into financial risk behavior and bankruptcy prediction.
+
+### Key Findings
+
+The analysis revealed that bankruptcy risk is strongly associated with:
+
+* Debt ratio and borrowing dependency.
+* Liability-to-equity structure.
+* Operational efficiency.
+* Cash flow performance.
+* Retained earnings and profitability indicators.
+
+Financially distressed companies generally exhibited higher leverage, lower profitability, weaker cash flow performance, and reduced financial stability compared to financially healthy companies.
+
+### Predictive Model Performance
+
+The predictive models successfully identified financially risky companies with strong classification performance.
+
+Among the evaluated models, XGBoost achieved the best overall performance, demonstrating superior bankruptcy prediction capability, stronger risk separation, and better handling of the imbalanced dataset compared to the MLP Neural Network model.
+
+### Clustering Outcomes
+
+K-Means clustering identified two primary financial company groups:
+
+* **Cluster 0:** Financially stable companies.
+* **Cluster 1:** Financially riskier companies.
+
+The clustering results revealed meaningful differences in profitability, leverage, and financial stability, supporting company segmentation and financial risk monitoring.
+
+In addition, bankruptcy probability scores generated by the XGBoost model were used to classify companies into Safe, Monitoring, and Critical risk categories, providing more detailed financial risk assessment.
+
+### Dashboard and Decision Support Outcomes
+
+The Power BI dashboards transformed analytical results into interactive decision-support tools that enabled:
+
+* Bankruptcy risk monitoring.
+* Financial KPI tracking.
+* Company risk categorization.
+* Financial behavior comparison.
+* Interactive business analysis through filters and slicers.
+
+### Overall Impact
+
+The project demonstrates how Artificial Intelligence, Machine Learning, Clustering, and Business Intelligence techniques can be integrated into a practical Decision Support System (DSS) for bankruptcy prediction and financial risk analysis.
+
+The final system supports:
+
+* Data-driven financial decision-making.
+* Early bankruptcy detection.
+* Financial risk monitoring.
+* Strategic business analysis.
+* Executive-level financial reporting.
+
+# Conclusion
+
+This graduation project successfully demonstrated the integration of Business Intelligence, statistical analysis, machine learning, clustering, and data visualization techniques for bankruptcy prediction and financial risk analysis.
+
+The project combined exploratory analysis, predictive modeling, clustering, and interactive Power BI dashboards to develop a practical Decision Support System (DSS) for financial monitoring and bankruptcy risk evaluation.
+
+The analysis showed that financially distressed companies are generally associated with higher debt exposure, weaker profitability, and lower operational efficiency. Among the predictive models, XGBoost achieved the strongest overall performance in identifying financially risky companies.
+
+The developed dashboards improved result interpretation through interactive visualization, KPI monitoring, company classification, and financial risk exploration. Overall, the project demonstrates how AI and Business Intelligence techniques can support data-driven financial decision-making and early bankruptcy risk detection.
+
+# References
+
+Altman, E. I. (1968). Financial ratios, discriminant analysis and the prediction of corporate bankruptcy. *Journal of Finance, 23*(4), 589–609.
+
+Power, D. J. (2002). *Decision support systems: Concepts and resources for managers*. *Greenwood Publishing Group*.
+
+Dua, D., & Graff, C. (2019). *UCI machine learning repository*. University of California, Irvine, School of Information and Computer Sciences.
+
+Han, J., Kamber, M., & Pei, J. (2012). *Data mining: Concepts and techniques* (3rd ed.). *Morgan Kaufmann*.
+
+Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794.
+
+Haykin, S. (2009). *Neural networks and learning machines* (3rd ed.). *Pearson*.
